@@ -1633,7 +1633,7 @@ h1 {
     @extend %listreset;
     @include align-reset(top, 20,24);
     color: $white;
-    margin: 0 -15px;
+    margin: 0 -15px 10px;
 
     li {
       width: 25%;
