@@ -253,15 +253,6 @@
             }
         }
     }
-    .property-for {
-        display: block;
-        @extend %text-center;
-        color: $white;
-        @extend %text-upparcase;
-        @include font(21,25);
-        background: $p42-default-grey;
-        padding: 5px;
-    }
     .listing-pro {
         @extend %listreset;
         border-bottom: 1px solid rgba($p42-default-grey, 0.35);
@@ -349,89 +340,7 @@
             }
 
             &.t-d {
-                color: $p42-default-grey;
-
-                &.deleting {
-                    &:after {
-                        background: $red;
-                        content: 'Deleting...';
-
-                        @include media('<widescreen'){
-                            text-align: right;
-                            padding: 15px 40px 0;
-                        }
-                        @include media('<tablet'){
-                            content: '';
-                        }
-                    }
-                    &:before {
-                        margin: 10px 0 0 -70px;
-                        content: "\e937";
-                        font-family: 'icomoon';
-                        -moz-animation: deleting 1.5s ease infinite;
-                        -webkit-moz-animation: deleting 1.5s ease infinite;
-                        animation: deleting 1.5s ease infinite;
-
-                        @include media('<widescreen'){
-                            left: 100%;
-                            margin: 13px 0 0 -180px;
-                        }
-                        @include media('<tablet'){ margin: 13px 0 0 -100px; }
-                    }
-                }
-                &.restoring {
-                    &:after {
-                        background: $green;
-                        content: 'Restoring...';
-                        
-                        @include media('<widescreen'){
-                            text-align: right;
-                            padding: 15px 40px 0;
-                        }
-
-                        @include media('<tablet'){
-                            content: '';
-                        }
-                    }
-                    &:before {
-                        content: "\e93f";
-                        margin: 13px 0 0 -85px;
-                        font-family: 'icomoon';
-                        -moz-animation: restoring 1.5s ease infinite;
-                        -webkit-moz-animation: restoring 1.5s ease infinite;
-                        animation: restoring 1.5s ease infinite;
-
-                        @include media('<widescreen'){
-                            left: 100%;
-                            margin: 13px 0 0 -180px;
-                        }
-                        @include media('<tablet'){ margin: 13px 0 0 -100px; }
-                    }
-                }
-                
-                &:after {
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    z-index: 54;
-                    @include font(18,22);
-                    color: $white;
-                    display: block;
-                    letter-spacing: 0;
-                    padding: 15px 0 0;
-                }
-                &:before {
-                    position: absolute;
-                    top: 0;
-                    left: 50%;
-                    font-size: 26px;
-                    line-height: 1;
-                    letter-spacing: 0;
-                    z-index: 55;
-                    color: $white;
-                }
+                .border:after { display: none;}
             }
         }
         .control-link {
@@ -456,6 +365,48 @@
                         color: $p42-color;
                     }
                 }
+            }
+        }
+    }
+    .fullDetail_ui {
+        width: 100%;
+        display: block;
+        @extend %layout;
+
+        .description {
+            @extend %layout;
+
+        }
+    }
+    .listing-imageSlider {
+        width: 215px;
+        background: $p42-background;
+        @extend %pull-left;
+        position: relative;
+        
+        .mask {
+            @extend %layout;
+            position: relative;
+        }
+        .slideset {
+            width: 100% !important;
+            font-size: 0 !important;
+            line-height: 0 !important;
+            letter-spacing: -4px !important;
+            white-space: nowrap !important;
+            float: none !important;
+        }
+        .slide {
+            display: inline-block !important;
+            vertical-align: top !important;
+            font-size: 12px !important;
+            line-height: 15px !important;
+            width: 100% !important;
+            letter-spacing: 0 !important;
+            padding: 4px;
+
+            img {
+                @extend %img-res;
             }
         }
     }
