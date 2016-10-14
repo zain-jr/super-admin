@@ -172,22 +172,22 @@ h1 {
     left: 0;
     opacity: 0;
     visibility: hidden;
-    z-index: 0;
 
     &:checked ~ {
       .fake-checkbox,
       .fake-radio {
-        &:after{ bottom: 0;}
+        background: $p42-color;
+        &:after { opacity: 1;}
       }
     }
   }
-.fake-checkbox,
-.fake-radio {
+
+  .fake-checkbox,
+  .fake-radio {
     @include squar(22px, 22px);
     border: 3px solid $p42-color;
     position: relative;
     color: $dark-grey;
-    @include align(top);
     pointer-events: none;
     position: absolute;
     top: 0;
@@ -196,17 +196,15 @@ h1 {
 
     &:after {
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 100%;
-      background: $p42-color;
-      pointer-events: none;
-      content: '';
-      transition: bottom 0.5s ease;
-      -webkit-transition: bottom 0.5s ease;
-      -moz-transition: bottom 0.5s ease;
-      -ms-transition: bottom 0.5s ease;
+      top: 50%;
+      left: 50%;
+      content: "\e94a";
+      margin: -15px 0 0 -13px;
+      font-family: 'icomoon';
+      color: $white;
+      font-size: 25px;
+      line-height: 1;
+      opacity: 0;
     }
   }
   .fake-label {

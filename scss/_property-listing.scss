@@ -255,7 +255,6 @@
     }
     .listing-pro {
         @extend %listreset;
-        border-bottom: 1px solid rgba($p42-default-grey, 0.35);
 
         @include media('<widescreen'){
             width: 1125px;
@@ -269,10 +268,6 @@
             @extend %layout;
             position: relative;
 
-            &:nth-child(2n){
-                background: $white;
-            }
-
             &.t-h{
                 background: $dim-grey;
                 color: $white;  
@@ -283,11 +278,6 @@
                 }
 
                 .fake-label { color: $white;}
-                .fake-checkbox{
-                    border-color: $white;
-
-                    &:after { background: $white;}    
-                }
                 label { padding: 4px 20px 0 30px;}
             }
 
@@ -340,26 +330,39 @@
             }
 
             &.t-d {
+                margin: 0 0 20px;
+                overflow: hidden;
+                background: $white;
+                border-bottom: 1px solid rgba($p42-default-grey, 0.35);
                 .border:after { display: none;}
             }
         }
         .control-link {
             @extend %listreset;
-            @include align-reset(top, 12,12);
+            @include font(14,17);
+            float: left;
+            width: 15%;
+            margin: 20px 0 0;
 
             li {
-                padding: 0 5px;
-
-                &:nth-child(2n){ background: transparent;}
-
+                display: block;
+                margin: 0 0 10px;
                 a {
                     cursor: pointer;
                     text-decoration: none;
                     color: #b2b3b5;
+                    display: block;
+                    padding: 3px;
 
                     span{
-                        font-size: 21px;
-                        line-height: 1;
+                        font-size: 13px;
+                        line-height: 20px;
+                        width: 25px;
+                        float: left;
+                        @extend %text-center;
+                    }
+                    [class="icon-tick"],[class="icon-cross"]{
+                        font-size: 20px;
                     }
                     &:hover{
                         color: $p42-color;
@@ -375,7 +378,22 @@
 
         .description {
             @extend %layout;
+            @include font(18,22);
+            font-weight: 400;
+            padding: 0 0 0 20px;
 
+            .layout {
+                float: left;
+                width: 85%;
+                padding: 0 10px 0 0;
+            }
+        }
+        .heading {
+            color: $nugree;
+            display: block;
+            @include font(22,26);
+            font-weight: 600;
+            margin: 0 0 10px;
         }
     }
     .listing-imageSlider {
@@ -408,6 +426,22 @@
             img {
                 @extend %img-res;
             }
+        }
+        .btn-prev, .btn-next {
+            position: absolute;
+            left: 4px;
+            top: 50%;
+            z-index: 5;
+            font-size: 50px;
+            line-height: 1;
+            text-decoration: none;
+            color: $white;
+            background: rgba($black, 0.7);
+            margin: -25px 0 0;
+        }
+        .btn-next {
+            left: auto;
+            right: 4px;
         }
     }
 }
