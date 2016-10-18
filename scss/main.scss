@@ -542,14 +542,8 @@ h1 {
   }
 
   .sideBar-active & {
-    padding: 87px 0 0 270px;
-
-    @include media('<tvscreen'){
-      padding: 89px 0 0 270px;
-    }
-    @include media('<desktop'){
-      padding: 89px 0 0;
-    }
+    padding: 65px 0 0 270px;
+    
     @include media('<tablet'){
       padding: 53px 0 0;
     }
