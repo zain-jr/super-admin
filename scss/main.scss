@@ -481,6 +481,13 @@ h1 {
     @extend .pull-right;
     position: relative;
 
+    @include media('<widescreen'){
+      width: 30%;
+    }
+    @include media('<desktop'){
+      width: 40%;
+    }
+
     .logout {
       @extend %pull-right;
       background: $dim-grey;
@@ -509,25 +516,6 @@ h1 {
   width: 100%;
   max-width: 150px;
   margin: 5px 0 5px 10px;
-  
-  @include media('<tvscreen'){
-    position: absolute; 
-    top: 6px;
-    left: 50%;
-    right: auto;
-    margin: 0 0 0 -135px;
-  }
-  @include media('<widescreen'){
-    max-width: 175px;
-    margin: 0 0 0 -110px;
-    top: 21px;
-  }
-
-  @include media('<tablet'){
-    max-width: 130px;
-    margin:  0 0 0 -40px;
-    top: 8px;
-  }
 
   a { display: block;}
   img { @extend %img-res;}
@@ -619,9 +607,6 @@ h1 {
   -moz-transition: left 0.5s ease;
   -ms-transition: left 0.5s ease;
 
-  @include media('<desktop'){
-    background: darken($p42-background, 20%);
-  }
   @include media('<tablet'){
     width: 100%;
     left: -100%;
