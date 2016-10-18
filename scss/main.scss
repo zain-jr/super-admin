@@ -421,7 +421,7 @@ h1 {
     padding:0 0 0 55px;
   }
   .searchOpener-Mobile{
-    @extend .pull-left;
+    @extend .pull-right;
     @extend %text-center;
     text-decoration: none;
     font-size: 20px;
@@ -440,8 +440,8 @@ h1 {
   .alerts{
     @extend %listreset;
     @include align-reset(top, 20,20);
-    @extend %pull-left;
-    margin: 15px 0 0;
+    @extend %pull-right;
+    margin: 15px 10px 0 0;
     padding: 0 0 0 7px;
 
     li {
@@ -477,7 +477,7 @@ h1 {
     }
   }
   .right-header {
-    width: 17%;
+    width: 25%;
     @extend .pull-right;
     position: relative;
 

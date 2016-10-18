@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?sig6lq');
-  src:  url('../fonts/icomoon.eot?sig6lq#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?sig6lq') format('truetype'),
-    url('../fonts/icomoon.woff?sig6lq') format('woff'),
-    url('../fonts/icomoon.svg?sig6lq#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?supbz5');
+  src:  url('../fonts/icomoon.eot?supbz5#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?supbz5') format('truetype'),
+    url('../fonts/icomoon.woff?supbz5') format('woff'),
+    url('../fonts/icomoon.svg?supbz5#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,20 +24,56 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-d-building:before {
+  content: "\e90a";
+}
+.icon-down-arrow:before {
+  content: "\e90b";
+}
+.icon-folded-newspaper:before {
+  content: "\e90e";
+}
+.icon-forbidden:before {
+  content: "\e910";
+}
+.icon-holding-hands-in-a-circle:before {
+  content: "\e911";
+}
+.icon-list:before {
+  content: "\e912";
+}
+.icon-notification-bell-outline-interface-symbol:before {
+  content: "\e913";
+}
+.icon-prize-banner:before {
+  content: "\e914";
+}
+.icon-unchecked:before {
+  content: "\e915";
+}
+.icon-verification-square-button:before {
+  content: "\e916";
+}
+.icon-verified-contact:before {
+  content: "\e917";
+}
+.icon-thumbs-up:before {
+  content: "\e92f";
+}
+.icon-minus-square:before {
+  content: "\e91a";
+}
+.icon-plus-square:before {
+  content: "\e91b";
+}
+.icon-home:before {
+  content: "\e901";
+}
 .icon-premium-badge:before {
   content: "\e900";
 }
 .icon-key:before {
   content: "\e940";
-}
-.icon-list:before {
-  content: "\e944";
-}
-.icon-chabbi:before {
-  content: "\e93e";
-}
-.icon-home-dash:before {
-  content: "\e941";
 }
 .icon-profile2:before {
   content: "\e942";
@@ -68,21 +104,6 @@
 }
 .icon-timer:before {
   content: "\e93b";
-}
-.icon-heart-o:before {
-  content: "\e94b";
-}
-.icon-thumbs-up:before {
-  content: "\e92f";
-}
-.icon-minus-square:before {
-  content: "\e91a";
-}
-.icon-plus-square:before {
-  content: "\e91b";
-}
-.icon-home:before {
-  content: "\e901";
 }
 .icon-tick:before {
   content: "\e94a";
