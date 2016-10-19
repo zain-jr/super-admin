@@ -73,6 +73,7 @@
             &.active {
                 a {
                     background: #dde0e2 !important;
+
                     &.active {
                         color: $green;
                     }
@@ -341,25 +342,84 @@
             @extend %listreset;
             @include font(14,17);
             float: left;
-            width: 15%;
-            margin: 20px 0 0;
+            width: 13%;
+            margin: -35px 0 0;
 
             li {
                 display: block;
                 margin: 0 0 10px;
+
+                &.active {
+                    button {
+                        color: $green;
+                        &:hover {
+                            color: darken($green, 10%);
+                        }
+                    }
+                }
+                &.deactive {
+                    button {
+                        color: lighten($nugree, 30%);
+                        &:hover {
+                            color: darken($nugree, 5%);
+                        }
+                    }
+                }
+                &.pending {
+                    button {
+                        color: $orange;
+                        &:hover {
+                            color: darken($orange, 10%);
+                        }
+                    }
+                }
+                &.reject {
+                    button {
+                        color: lighten($red, 10%);
+                        &:hover {
+                            color: darken($red, 10%);
+                        }
+                    }
+                }
+                &.delete {
+                    button {
+                        color: #e14646;
+                        &:hover {
+                            color:darken(#e14646, 10%);
+                        }
+                    }
+                }
+                &.verified {
+                    button {
+                        color: $p42-color;
+                        &:hover {
+                            color: darken($p42-color, 10%);
+                        }
+                    }
+                }
+
+                button,
                 a {
+                    border: 0;
                     cursor: pointer;
                     text-decoration: none;
                     color: #b2b3b5;
                     display: block;
                     padding: 3px;
+                    width: 100%;
+                    @extend %text-left;
 
                     span{
-                        font-size: 13px;
+                        font-size: 18px;
                         line-height: 20px;
-                        width: 25px;
+                        width: 50px;
                         float: left;
                         @extend %text-center;
+
+                        @include media('<tvscreen'){
+                            width: 20px;
+                            @include font(14,17);
+                        }
                     }
                     [class="icon-tick"],[class="icon-cross"]{
                         font-size: 20px;
@@ -374,17 +434,23 @@
     .fullDetail_ui {
         width: 100%;
         display: block;
-        @extend %layout;
+        @extend %cleafix;
 
         .description {
-            @extend %layout;
+            @extend %clearfix;
+            float: left;
+            width: 82%;
             @include font(18,22);
             font-weight: 400;
             padding: 0 0 0 20px;
 
+            @include media('<tvscreen'){
+                width: 76%;
+            }
+
             .layout {
                 float: left;
-                width: 85%;
+                width: 87%;
                 padding: 0 10px 0 0;
             }
         }

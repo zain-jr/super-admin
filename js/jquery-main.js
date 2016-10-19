@@ -9,6 +9,10 @@ $(document).ready(function() {
 			$('body').removeClass('sideBar-active');
 		});
 	}
+	if($('.listing-pro').find('.t-d').length == 0){
+		$('.propertyNotFound').removeClass('hidden');
+		$('.pager').remove();
+	}
 	
 });
 
