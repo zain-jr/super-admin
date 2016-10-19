@@ -3,12 +3,6 @@ jQuery(window).load(function(){
 });
 
 $(document).ready(function() {
-  if (screen.width < 768){
-		$('.call-agent-btn').each(function(){
-			var mobileNumber = $(this).attr('data-tel');
-			$(this).attr('href', 'tel:'+mobileNumber)
-		});
-	}
 	if (screen.width < 1024){
 		$('body').removeClass('sideBar-active');
 		$(document).on('click', '.sideBar-links li', function(){
@@ -68,16 +62,6 @@ $(document).keyup(function(e) {
 	}   // esc
 });
 
-$(document).on('change', '.addPro-type', function(){
-	$(this).closest('ul').find('li').removeClass('active');
-	
-	$('.addPro-type').each(function(){
-		if($(this).is(':checked')){
-			$(this).closest('li').addClass('active');
-			$('.subtype-links').removeClass('hidden');
-		}
-	});
-});
 
 $(document).on('click', '.filters-links-opener', function(){	
 	$(this).closest('li').toggleClass('active');
@@ -94,18 +78,15 @@ $(document).on('focusin', '.PriceField', function(){
 	$('.calculatedPrice').removeClass('priceShow');
 	$('.calculatedPrice').addClass('priceShow');
 });
+
 $(document).on('focusout', '.PriceField', function(){
 	$('.calculatedPrice').removeClass('priceShow');
-});
-
-$(document).on('click', '.role-opener', function(){
-	$('.registration-form').find('.role-listing').slideToggle();
-	$(this).toggleClass('active');
 });
 
 $(document).on('click', '.sideBar-opener', function(){
 	$('body').toggleClass('sideBar-active');
 });
+
 $(document).on('click', '.property-status-links-opener', function(){
 	$(this).toggleClass('active');
 	$('.property-status-links').slideToggle();
