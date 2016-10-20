@@ -37,7 +37,13 @@ $media-expressions: (
 @import 'change-password';
 @import 'property-detail';
 @import 'fancybox';
-
+body {
+  &.sideBar-active {
+    @include media('<tablet'){
+      overflow: hidden;
+    }
+  }
+}
 .page-loader {
   background:#525252 url('../images/bg.jpg') no-repeat;
   background-size: 100% auto;
@@ -410,6 +416,7 @@ h1 {
   display: block;
   background: $mix-black;
   padding: 0 0 0 50px;
+  min-width: 320px;
 
   @include media('<tvscreen'){
     padding: 0 0 0 50px;
@@ -418,7 +425,7 @@ h1 {
     padding:0 0 0 35px;
   }
   @include media('<tablet'){
-    padding:0 0 0 55px;
+    padding:0 0 0 25px;
   }
   .searchOpener-Mobile{
     @extend .pull-right;
@@ -433,7 +440,6 @@ h1 {
     margin: 15px 0 0;
     
     @include media('<tablet'){
-      @include squar(36px, 33px);
       font-size: 18px;
     }
   }
@@ -443,6 +449,12 @@ h1 {
     @extend %pull-right;
     margin: 15px 10px 0 0;
     padding: 0 0 0 7px;
+
+    @include media('<tablet'){
+      margin: 15px 8px 0 0;
+      @include align-reset(top, 16,18);
+      padding: 0;
+    }
 
     li {
       padding: 0 10px;
@@ -466,6 +478,10 @@ h1 {
 
       span[class^="icon-email-alerts"],span[class*="icon-email-alerts"]{
         font-size: 25px;
+
+        @include media('<tablet'){
+          font-size: 20px;
+        }
       }
 
       a {
@@ -487,6 +503,9 @@ h1 {
     @include media('<desktop'){
       width: 40%;
     }
+    @include media('<tablet'){
+      width: 61%;
+    }
 
     .logout {
       @extend %pull-right;
@@ -496,6 +515,11 @@ h1 {
       @extend %text-upparcase;
       padding: 18px 40px 19px;
       position: relative;
+
+      @include media('<tablet'){
+        @include font(13,16);
+        padding: 14px 7px;
+      }
 
       &:hover {
         background: $darken-grey;
@@ -508,6 +532,8 @@ h1 {
         font-size: 20px;
         line-height: 1;
         margin: -10px 0 0;
+
+        @include media('<tablet'){ display: none;}
       }
     }
   }
@@ -516,6 +542,11 @@ h1 {
   width: 100%;
   max-width: 150px;
   margin: 5px 0 5px 10px;
+
+  @include media('<tablet'){
+    max-width: 100px;
+    margin: 6px 0 7px 6px;
+  }
 
   a { display: block;}
   img { @extend %img-res;}
@@ -532,12 +563,12 @@ h1 {
   -moz-transition: padding 0.5s ease;
   -ms-transition: padding 0.5s ease;
 
-  @include media('<tablet'){
-    min-height: 500px;
-  }
-
   .sideBar-active & {
     padding: 65px 0 0 270px;
+
+    @include media('<desktop'){
+      padding: 65px 0 0;
+    }
   }
 }
 .table-responsive {
@@ -557,6 +588,10 @@ h1 {
 
   .sideBar-active &{
     width: 30px;
+
+    @include media('<tablet'){
+      width: 23px;
+    }
   }
 
   span,
@@ -569,6 +604,10 @@ h1 {
     height: 2px;
     content: '';
     margin: -1px 0 0;
+
+    @include media('<tablet'){
+      margin: -2px 0 0;
+    }
   }
   &:before {
     top: auto;
@@ -595,6 +634,7 @@ h1 {
   @include media('<tablet'){
     width: 100%;
     left: -100%;
+    top: 44px;
   }
 
   .sideBar-active & {
@@ -608,29 +648,6 @@ h1 {
     left: 0;
     right: 0;
     bottom: 0;
-  }
-
-  .sideBar-opener {
-    border: 2px solid $white;
-    border-radius: 0;
-    width: auto;
-    bottom: auto;
-    left: auto;
-    right: 20px;
-    top: 20px;
-    color: $white;
-    text-decoration: none;
-    border-radius: 100%;
-
-    @include media('>=desktop'){ display: none;}
-
-    &:after { @extend %hidden;}
-
-    span {
-      display: block;
-      font-size: 30px;
-      line-height: 1;
-    }
   }
 
   .profile-picture {
@@ -1591,10 +1608,24 @@ h1 {
     @extend %text-left;
     font-weight: 300;
 
+    @include media('<tablet'){
+      @include font(20,24);
+      margin: 0 0 10px;
+    }
+
     span {
       color: $p42-default-grey;
       font-weight: 300;
       @include font(14,17);
+    }
+  }
+  .statistics-slider {
+    width: 100%;
+    display: block;
+    @extend %layout;
+    
+    @include media('<tablet'){
+      overflow: auto;
     }
   }
   .statistics {
@@ -1605,6 +1636,14 @@ h1 {
 
     @include media('<tvscreen'){
       margin: 0 -15px 10px;
+    }
+    @include media('<widescreen'){
+      @include align-reset(top, 18,22);
+    }
+    
+    @include media('<tablet'){
+      white-space: nowrap;
+      min-width: 1188px;
     }
 
     li {

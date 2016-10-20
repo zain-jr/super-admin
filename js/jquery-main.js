@@ -15,7 +15,6 @@ $(document).ready(function() {
 	}
 	
 });
-
 // page init
 jQuery(function(){
 	initLightbox();
