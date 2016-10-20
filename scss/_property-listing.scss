@@ -1,3 +1,4 @@
+.agents-listing-page,
 .property-listing-page {
     @extend %layout;
     background: $p42-background;
@@ -282,7 +283,11 @@
                 label { padding: 4px 20px 0 30px;}
             }
 
-            p{ margin: 0;}
+            address,
+            p{
+                margin: 0;
+                font-style: normal;
+            }
             .border {
                 position: relative;
 
@@ -305,22 +310,27 @@
                     &:after { display: none;}
                 }
             }
+            .pro-address,
             .pro-type {
                 width: 20%;
                 padding: 15px 15px 13px;
             }
+            .pro-email,
             .pro-location {
                 width: 20%;
                 padding: 15px 15px 13px;
             }
+            .pro-date,
             .pro-price {
                 width: 10%;
                 padding: 15px 15px 13px;
             }
+            .pro-name,
             .pro-size {
                 width: 13%;
                 padding: 15px 15px 13px;
             }
+            .pro-role,
             .pro-date {
                 width: 10%;
                 padding: 15px 15px 13px;
@@ -329,7 +339,18 @@
                 width: 15%;
                 padding: 15px 15px 13px;
             }
+            .p-role {
+                @extend %text-left;
+                display: block;
+                color: $dim-grey;
+                padding: 2px;
+                background: $p42-background;
+                margin: 0 0 2px;
 
+                @include media('<tvscreen'){
+                    @include font(12,15);
+                } 
+            }
             &.t-d {
                 margin: 0 0 20px;
                 overflow: hidden;
@@ -460,8 +481,16 @@
             @include font(22,26);
             font-weight: 600;
             margin: 0 0 10px;
+
+            a {
+                @include align(top);
+                color: $nugree;
+                text-decoration: none;
+                &:hover { color: $orange;}
+            }
         }
     }
+    .person-pic-holder,
     .listing-imageSlider {
         width: 215px;
         background: $p42-background;
@@ -508,6 +537,32 @@
         .btn-next {
             left: auto;
             right: 4px;
+        }
+    }
+    .person-pic-holder {
+        margin: 0 0 10px;
+        width: 150px;
+        a { display: block;}
+        img { @extend %img-res;}
+    }
+}
+.agents-listing-page {
+    .sorting-filtering {
+        padding: 0 20px;
+        li {
+            width: 25%;
+        }
+    }
+    .fullDetail_ui {
+        .description {
+            width: 88%;
+
+            @include media('<tvscreen'){
+                width: 82%;
+            }
+            @include media('<widescreen'){
+                width: 85%;
+            }
         }
     }
 }
