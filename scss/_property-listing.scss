@@ -341,12 +341,14 @@
                 width: 13%;
                 padding: 15px 15px 13px;
             }
+            .pro-m-number,
             .pro-AgencyName,
             .pro-role,
             .pro-date {
                 width: 10%;
                 padding: 15px 15px 13px;
             }
+            .pro-p-number,
             .pro-controls {
                 width: 15%;
                 padding: 15px 15px 13px;
@@ -466,7 +468,7 @@
     }
     .fullDetail_ui {
         width: 100%;
-        display: block;
+        display: block !important;
         @extend %cleafix;
 
         .description {
@@ -500,6 +502,24 @@
                 text-decoration: none;
                 &:hover { color: $orange;}
             }
+        }
+    }
+    .moreDetail-slide {
+        width: 100%;
+        display: block !important;
+
+        .layout {
+            @include align-reset(top, 14,17);
+            width: 100%;
+            display: block !important;
+
+            &.colored {
+                background: $p42-background;
+            }
+        }
+        a {
+            text-decoration: none;
+            color: $dim-grey;
         }
     }
     .person-pic-holder,
@@ -590,6 +610,7 @@
                 display: block;
                 padding: 5px;
                 @extend %text-center;
+                &:hover { text-decoration: none;}
             }
         }
     }
