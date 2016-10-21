@@ -581,6 +581,16 @@
             @include media('<widescreen'){
                 width: 85%;
             }
+            .btn-default {
+                width: 130px;
+                margin: 10px auto;
+                background: transparent;
+                text-decoration: underline;
+                color: $nugree;
+                display: block;
+                padding: 5px;
+                @extend %text-center;
+            }
         }
     }
 }
