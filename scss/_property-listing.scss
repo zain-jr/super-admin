@@ -1,4 +1,5 @@
 .agents-listing-page,
+.user-listing-page,
 .property-listing-page {
     @extend %layout;
     background: $p42-background;
@@ -546,11 +547,17 @@
         img { @extend %img-res;}
     }
 }
-.agents-listing-page {
+.agents-listing-page,
+.user-listing-page {
     .sorting-filtering {
         padding: 0 20px;
         li {
             width: 25%;
+        }
+    }
+    .listing-pro {
+        .control-link {
+            margin: -105px 0 0;
         }
     }
     .fullDetail_ui {
