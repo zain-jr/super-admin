@@ -255,6 +255,13 @@
                 width: calc(100% - 50px);
             }
         }
+        .fake-select {
+            border: 1px solid $nugree;
+
+            &:after {
+                background: $nugree;
+            }
+        }
     }
     .listing-pro {
         @extend %listreset;
@@ -272,7 +279,7 @@
             position: relative;
 
             &.t-h{
-                background: $dim-grey;
+                background: $nugree;
                 color: $white;  
                 
                 .customCheckbox {
@@ -297,7 +304,7 @@
                     top: -999px;
                     left: 0;
                     bottom: -999px;
-                    background: rgba($p42-default-grey, 0.35);
+                    background: $white;
                     width: 1px;
                     content: '';
                 }
@@ -331,6 +338,7 @@
                 width: 13%;
                 padding: 15px 15px 13px;
             }
+            .pro-AgencyName,
             .pro-role,
             .pro-date {
                 width: 10%;
@@ -541,7 +549,7 @@
         }
     }
     .person-pic-holder {
-        margin: 0 0 10px;
+        margin: -40px 0 10px;
         width: 150px;
         a { display: block;}
         img { @extend %img-res;}
