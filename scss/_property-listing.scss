@@ -506,7 +506,8 @@
     }
     .moreDetail-slide {
         width: 100%;
-        display: block !important;
+        @extend %clearfix;
+        display: none;
 
         .layout {
             @include align-reset(top, 14,17);
@@ -610,6 +611,7 @@
                 display: block;
                 padding: 5px;
                 @extend %text-center;
+                cursor: pointer;
                 &:hover { text-decoration: none;}
             }
         }

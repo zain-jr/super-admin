@@ -13,7 +13,7 @@ $(document).ready(function() {
 		$('.propertyNotFound').removeClass('hidden');
 		$('.pager').remove();
 	}
-	
+	$('.moreDetail-slide').slideUp();
 });
 // page init
 jQuery(function(){
@@ -103,4 +103,10 @@ $(document).on('click', '.property-status-links>li>a', function(){
 });
 $(document).on('click', '.searchOpener-Mobile', function(){
 	$('.searchByID').slideToggle();
+});
+$(document).on('click', '.moreDetail-slideOpener', function(){
+	$(this).closest('.t-d').find('.moreDetail-slide').slideToggle();
+	$(this).text(function(i, text){
+          return text === "View more" ? "View Less" : "View more";
+    })
 });
