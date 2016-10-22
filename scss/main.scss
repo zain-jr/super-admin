@@ -36,7 +36,9 @@ $media-expressions: (
 @import 'property-listing';
 @import 'change-password';
 @import 'property-detail';
+@import 'add-sum';
 @import 'fancybox';
+
 body {
   &.sideBar-active {
     @include media('<tablet'){
