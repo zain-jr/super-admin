@@ -1,11 +1,27 @@
 .addCity{
     background: $p42-background;
+   
    &.container{
        max-width: 997px;
        margin: 0 auto;
        display: block;
        padding:0;
-  }
+    }
+
+    .image-uploading-area {
+        li {
+            width: 200px;
+
+            &:first-child{
+                .file-uploader{
+                    height: 150px;
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
 
    form{
        max-width:500px;
@@ -30,9 +46,9 @@
         @include media ('<tablet'){
             margin: 0 0 10px;
         }
-           button{
-        margin: 10px;
-    }
+        button{
+            margin: 10px;
+        }
      }
 
     label{
