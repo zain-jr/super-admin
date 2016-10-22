@@ -77,7 +77,7 @@
 				</div>
 			</aside>
 			<div id="page-holder">
-				<div class="dashboard-statistics">
+				<!--<div class="dashboard-statistics">
 					<h1>Dashboard  <span>dashboard &amp; statistics</span></h1>
 					<div class="statistics-slider">
 						<ul class="statistics">
@@ -107,7 +107,7 @@
 							</li>
 						</ul>
 					</div>
-				</div>
+				</div>-->
 				<!--<div class="property-listing-page">
 					<a class="property-status-links-opener"><span class="text-container">active</span><span class="lines"></span></a>
 					<ul class="property-status-links">
@@ -510,29 +510,29 @@
 						<li><a href="#" class="last"><span class="icon-arrow1-right"></span></a></li>
 					</ul>
 				</div>-->
-				<div class="addCity container">
+				<!--<div class="addCity container">
 					<h2>Add City</h2>
 					<form action="">
 						<div class="layout">
-							<label for="">City Name</label>
+							<label for="city-name">City Name</label>
 							<div class="input-holder">
-								<input type="text" placeholder="Lahore">
+								<input type="text" id="city-name">
 							</div>
 						</div>
 							<div class="layout">
-							<label for="">Select Countary</label>
+							<label>Select Countary</label>
 							<div class="input-holder">
 							<span class="fake-select">
-								<select name="" id="">
-									<option value="">PAKISTAN</option>
+								<select>
+									<option>PAKISTAN</option>
 								</select>
 							</span>
 							</div>
 						</div>
 							<div class="layout">
-							<label for="">City priority</label>
+							<label for="city-pro">City priority</label>
 							<div class="input-holder">
-								<input type="text" placeholder="500">
+								<input type="text" id="city-pro">
 							</div>
 						</div>
 						<ul class="image-uploading-area">
@@ -549,7 +549,44 @@
 							</li>
 						</ul>
 						<div class="layout text-center">
-							<button class="btn-default" type="submit">Add City</button>
+							<button class="btn-default" type="submit">Add City<span class="icon-arrow-right"></span></button>
+						</div>
+					</form>
+				</div>-->
+				<div class="addSocieties container">
+					<h2>Add Societies</h2>
+					<form>
+						<div class="layout">
+							<label for="society-name">City Name</label>
+							<div class="input-holder">
+								<select class="js-example-basic-single">
+									<option>acha</option>
+									<option>ok</option>
+									<option>hmm</option>
+								</select>
+							</div>
+						</div>
+						<div class="layout">
+							<label for="society-pro">Society priority</label>
+							<div class="input-holder">
+								<input type="text" id="society-pro">
+							</div>
+						</div>
+						<ul class="image-uploading-area">
+							<li>
+								<div class="file-uploader">
+									<input type="file" ngf-select ng-model="form.data.files.mainFile.file" onchange="previewAddPropertyImg(this , '.img-thumb1')" class="upload-img">
+									<div class="image-holder">
+										<img src="#" class="img-thumb1" alt="image Description">
+										<span class="propertyDocumentCloseBtn" ng-click="cancelFile(0)"><span class="icon-bin-delete"></span></span>
+									</div>
+								</div>
+								<input type="text" ng-model="form.data.files.mainFile.title" class="picture-name" placeholder="Title">
+								<span class="error-text">This is error</span>
+							</li>
+						</ul>
+						<div class="layout text-center">
+							<button class="btn-default" type="submit">Add Society<span class="icon-arrow-right"></span></button>
 						</div>
 					</form>
 				</div>
@@ -586,35 +623,6 @@
 					<button type="submit">SEND</button>
 				</form>
 			</div>
-			<div id="terms-of-user" class="lightbox generic-lightbox text-left">
-				<span class="lighbox-heading">Privacy <span>Policy</span></span>
-				<p>This Privacy policy is subject to the terms of the Site Policy (User agreement) of property42.pk. This policy is effective from the date and time a user registers with property42.pk by filling up the Registration form and accepting the terms and conditions laid out in the Site Policy.</p>
-				<p>In order to provide a personalized browsing experience, property42.pk may collect personal information from you. Additionally our website may require you to complete a registration form or seek some information from you. When you let us have your preferences, we will be able to deliver or allow you to access the most relevant information that meets your end.</p>
-				<p>To extend this personalized experience property42.pk may track the IP address of a user's computer and save certain information on your system in the form of cookies. A user has the option of accepting or declining the cookies of this website by changing the settings of your browser.</p>
-				<p>The personal information provided by the users to property42.pk will not be provided to third parties without previous consent of the user concerned. Information of a general nature may however be revealed to external parties</p>
-				<p>Every effort will be made to keep the information provided by users in a safe manner, the information will be displayed on the website will be done so only after obtaining consent from the users. Any user browsing the site generally is not required to disclose his identity or provide any information about him/her, it is only at the time of registration you will be required to furnish the details in the registration form</p>
-				<p>A full user always has the option of not providing the information which is not mandatory. You are solely responsible for maintaining confidentiality of the User password and user identification and all activities and transmission performed by the User through his user identification and shall be solely responsible for carrying out any online or off-line transaction involving credit cards / debit cards or such other forms of instruments or documents for making such transactions.</p>
-				<p>You agree that PROPERTY42.PK may use personal information about you to improve its marketing and promotional efforts, to analyze site usage, improve the Site's content and product offerings, and customize the Site's content, layout, and services. These uses improve the Site and better tailor it to meet your needs, so as to provide you with a smooth, efficient, safe and customized experience while using the Site.</p>
-				<p>You agree that PROPERTY42.PK may use your personal information to contact you and deliver information to you that, in some cases, are targeted to your interests, such as targeted banner advertisements, administrative notices, product offerings, and communications relevant to your use of the Site. By accepting the User Agreement and Privacy Policy, you expressly agree to receive this information. If you do not wish to receive these communications, we encourage you to opt out of the receipt of certain communications in your profile. You may make changes to your profile at any time. It is the belief of PROPERTY42.PK that privacy of a person can be best guaranteed by working in conjunction with the Law enforcement authorities.</p>
-				<p>We may collect your personal data when you use this Site or our services. The term "use" includes:</p>
-				<p>(a) Uploading your Content;</p>
-				<p>(b) Making submissions/posts in user forums;</p>
-				<p>(c) Undertaking transactions on or via this Site;</p>
-				<p>(d) Accessing or browsing the Site;</p>
-				<p>(e) Communicating with us via email or signing up for newsletters</p>
-				<p>(f) Completing online forms</p>
-				<p>(g) Calling us or sending us an enquiry (including via one of the online property portal websites).</p>
-				<p>We may also collect your personal data from publicly available information such as information on third party websites, from our business partners who have your consent to pass it on or who are authorized by you to authenticate or identify you to us or enable you to sign in to our Site using their credentials</p>
-				<p>We may also collect your personal data when we monitor and record email and telephone communications with you or between you and others who are using our systems or those of our agents acting on our behalf.</p>
-				<p>We may collect all or some of the following personal data from or about you:</p>
-				<p>(a) Your name and title and gender and date of birth;</p>
-				<p>(b) Your company name or affiliation;</p>
-				<p>(c) Your contact information including phone/mobile number/fax and email address;</p>
-				<p>(d) Other demographic information including your home or other addresses and postcode;</p>
-				<p>(e) Your communication and purchase preferences and interests;</p>
-				<p>(f) Where you have submitted/posted your Content, your submissions and posts;</p>
-				<p>(g) Where you have registered with us, your user name and password.</p>
-			</div>
 		</div>
 	</div>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" defer></script>
@@ -622,6 +630,7 @@
 	<script src="js/placeholder.js" type="text/javascript" defer></script>
 	<script src="js/lightBox.js" type="text/javascript" defer></script>
 	<script src="js/jquery.carousel.js" type="text/javascript" defer></script>
+	<script src="js/select2-min.js" type="text/javascript" defer></script>
 	<script src="js/jquery-main.js" type="text/javascript" defer></script>
 </body>
 </html>

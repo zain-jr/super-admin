@@ -3,6 +3,7 @@ jQuery(window).load(function(){
 });
 
 $(document).ready(function() {
+	$(".js-example-basic-single").select2();
 	if (screen.width < 1024){
 		$('body').removeClass('sideBar-active');
 		$(document).on('click', '.sideBar-links li', function(){

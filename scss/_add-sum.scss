@@ -1,11 +1,10 @@
-.addCity{
-    background: $p42-background;
-   
+.addSocieties, .addCity{
+    background: $p42-background;;
+
    &.container{
-       max-width: 997px;
-       margin: 0 auto;
-       display: block;
+       max-width: 995px;
        padding:0;
+       margin: 50px auto 0;
     }
 
     .image-uploading-area {
@@ -24,20 +23,28 @@
     }
 
    form{
-       max-width:500px;
-       margin:30px auto;
-       overflow: hidden;
+        max-width:500px;
+        margin:30px auto;
+        overflow: hidden;
 
-   @include media ('<tablet'){
-           padding: 15px;
-       }
-   }
+    @include media ('<tablet'){
+            padding: 15px;
+        }
+    }
+
+    button {
+        span {
+            @include align(middle);
+            margin: 0 0 0 10px;
+        }
+    }
 
     h2{
         color:$white;
         text-align: center;
         background: $nugree;
         padding: 5px;
+        @extend %text-upparcase;
       }
 
     .layout{
@@ -46,29 +53,31 @@
         @include media ('<tablet'){
             margin: 0 0 10px;
         }
-        button{
-            margin: 10px;
+        .select2-container {
+            width: 100% !important;        
         }
      }
 
     label{
-        width:200px;
+        color: $darken-grey;
+        width:160px;
         @extend %pull-left;
-        font-size: 17px;
         margin: 7px 0;
 
         @include media ('<tablet'){
             width:100%;
-            font-size: 14px;
         }
     }
 
     .input-holder{
         @extend %layout;
         padding: 3px;
+        
         input{
-            width:100%;
+            @include squar(100%, 40px);
             border:none;
+            padding: 8px;
+            @include font(16,19);
         }
     }
 }
