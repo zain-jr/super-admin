@@ -184,7 +184,7 @@ h1 {
     &:checked ~ {
       .fake-checkbox,
       .fake-radio {
-        background: $p42-color;
+        background: $nugree;
         &:after { opacity: 1;}
       }
     }

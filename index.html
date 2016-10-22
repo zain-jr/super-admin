@@ -510,6 +510,7 @@
 						<li><a href="#" class="last"><span class="icon-arrow1-right"></span></a></li>
 					</ul>
 				</div>-->
+<<<<<<< HEAD
 				<div class="addCity">
 				</div>
 				<div class="city-listing">
@@ -526,6 +527,50 @@
 						<li><a href="#" class="next"><span class="icon-bold-arrow-right"></span></a></li>
 						<li><a href="#" class="last"><span class="icon-arrow1-right"></span></a></li>
 					</ul>
+=======
+				<div class="addCity container">
+					<h2>Add City</h2>
+					<form action="">
+						<div class="layout">
+							<label for="">City Name</label>
+							<div class="input-holder">
+								<input type="text" placeholder="Lahore">
+							</div>
+						</div>
+							<div class="layout">
+							<label for="">Select Countary</label>
+							<div class="input-holder">
+							<span class="fake-select">
+								<select name="" id="">
+									<option value="">PAKISTAN</option>
+								</select>
+							</span>
+							</div>
+						</div>
+							<div class="layout">
+							<label for="">City priority</label>
+							<div class="input-holder">
+								<input type="text" placeholder="500">
+							</div>
+						</div>
+						<ul class="image-uploading-area">
+							<li>
+								<div class="file-uploader">
+									<input type="file" ngf-select ng-model="form.data.files.mainFile.file" onchange="previewAddPropertyImg(this , '.img-thumb1')" class="upload-img">
+									<div class="image-holder">
+										<img src="#" class="img-thumb1" alt="image Description">
+										<span class="propertyDocumentCloseBtn" ng-click="cancelFile(0)"><span class="icon-bin-delete"></span></span>
+									</div>
+								</div>
+								<input type="text" ng-model="form.data.files.mainFile.title" class="picture-name" placeholder="Title">
+								<span class="error-text">This is error</span>
+							</li>
+						</ul>
+						<div class="layout text-center">
+							<button class="btn-default" type="submit">Add City</button>
+						</div>
+					</form>
+>>>>>>> sajid
 				</div>
 			</div>
 		</main>

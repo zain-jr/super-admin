@@ -110,3 +110,33 @@ $(document).on('click', '.moreDetail-slideOpener', function(){
           return text === "View more" ? "View Less" : "View more";
     })
 });
+
+$(document).on('click', '.propertyDocumentCloseBtn', function(){
+	 $(this).closest('li').find('.picture-name').val('');
+	 $(this).closest('li').find('img').attr('src', '#');
+	 $(this).closest('li').removeClass('image-loaded');
+ });
+
+function previewAddPropertyImg(file, target)
+ {
+	previewFile(file, target);
+	$(file).closest('li').addClass('image-loaded');
+	$(file).closest('li').find('.picture-name').focus();
+ }
+
+
+function previewFile(file, target) {
+  var preview = document.querySelector(target);
+  var file    = file.files[0];
+  var reader  = new FileReader();
+
+  reader.onloadend = function () {
+    preview.src = reader.result;
+  }
+
+  if (file) {
+    reader.readAsDataURL(file);
+  } else {
+    preview.src = "";
+  }
+}

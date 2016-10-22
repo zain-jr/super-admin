@@ -1,2 +1,79 @@
+<<<<<<< HEAD
 .addCity {
+=======
+.addCity{
+    background: $p42-background;
+   
+   &.container{
+       max-width: 997px;
+       margin: 0 auto;
+       display: block;
+       padding:0;
+    }
+
+    .image-uploading-area {
+        li {
+            width: 200px;
+
+            &:first-child{
+                .file-uploader{
+                    height: 150px;
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+   form{
+       max-width:500px;
+       margin:30px auto;
+       overflow: hidden;
+
+   @include media ('<tablet'){
+           padding: 15px;
+       }
+   }
+
+    h2{
+        color:$white;
+        text-align: center;
+        background: $nugree;
+        padding: 5px;
+      }
+
+    .layout{
+        margin:0 0 30px; 
+
+        @include media ('<tablet'){
+            margin: 0 0 10px;
+        }
+        button{
+            margin: 10px;
+        }
+     }
+
+    label{
+        width:200px;
+        @extend %pull-left;
+        font-size: 17px;
+        margin: 7px 0;
+
+        @include media ('<tablet'){
+            width:100%;
+            font-size: 14px;
+        }
+    }
+
+    .input-holder{
+        @extend %layout;
+        padding: 3px;
+        input{
+            width:100%;
+            border:none;
+        }
+    }
+ 
+>>>>>>> sajid
 }
