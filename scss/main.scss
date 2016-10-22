@@ -141,7 +141,7 @@ h1 {
   font-weight: 700;
   text-decoration: none;
   color: $white;
-  background: $p42-color;
+  background: $nugree;
   padding: 10px 25px;
   border: 0;
   transition: background 0.4s ease;
@@ -155,7 +155,7 @@ h1 {
   }
 
   &:hover {
-    background: lighten( $p42-color, 10%);
+    background: lighten( $nugree, 10%);
   }
 }
 .customCheckbox,
@@ -348,6 +348,7 @@ h1 {
   position: relative;
   z-index: 1;
   cursor: pointer;
+  border: 1px solid $nugree;
 
   &:after {
     position: absolute;
@@ -355,7 +356,7 @@ h1 {
     right: 0;
     bottom: 0;
     width: 28px;
-    background: $p42-color;
+    background: $nugree;
     content: '';
     pointer-events: none;
     cursor: pointer;
@@ -1335,7 +1336,7 @@ h1 {
   @extend %text-upparcase;
   @include font(14,18);
   color: $p42-color;
-  border: 1px solid $p42-color;
+  border: 1px solid $nugree;
   border-radius: 2px;
   text-decoration: none;
   font-weight: 700;
@@ -1357,7 +1358,7 @@ h1 {
 
   &:hover {
     color: $white;
-    background: $p42-color;
+    background: $nugree;
   }
 }
 .generic-lightbox {

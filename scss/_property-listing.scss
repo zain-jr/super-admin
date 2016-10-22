@@ -1,3 +1,4 @@
+.city-listing,
 .agents-listing-page,
 .user-listing-page,
 .property-listing-page {
@@ -253,13 +254,6 @@
             }
             @include media('<tablet'){
                 width: calc(100% - 50px);
-            }
-        }
-        .fake-select {
-            border: 1px solid $nugree;
-
-            &:after {
-                background: $nugree;
             }
         }
     }
