@@ -315,11 +315,13 @@
                     &:after { display: none;}
                 }
             }
+            .pro-city,
             .pro-address,
             .pro-type {
                 width: 20%;
                 padding: 15px 15px 13px;
             }
+            .pro-priority,
             .pro-email,
             .pro-location {
                 width: 20%;
@@ -330,11 +332,23 @@
                 width: 10%;
                 padding: 15px 15px 13px;
             }
+            .pro-image,
             .pro-name,
             .pro-size {
                 width: 13%;
                 padding: 15px 15px 13px;
             }
+
+            .pro-image {
+                width: 20%;
+                img {
+                    @extend %img-res;
+                    max-width: 149px;
+                    max-height: 135px;
+                    margin: 0 auto;
+                }
+            }
+
             .pro-m-number,
             .pro-AgencyName,
             .pro-role,
@@ -609,6 +623,12 @@
                 &:hover { text-decoration: none;}
             }
         }
+    }
+}
+.city-listing {
+    .control-link {
+        margin: 0 !important;
+        width: 100% !important;
     }
 }
 @keyframes deleting{
