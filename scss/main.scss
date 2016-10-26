@@ -186,6 +186,7 @@ h1 {
       .fake-checkbox,
       .fake-radio {
         background: $nugree;
+        border-color:$nugree; 
         &:after { opacity: 1;}
       }
     }

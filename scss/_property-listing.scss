@@ -282,6 +282,15 @@
                     line-height: 14px !important;
                 }
 
+                .customCheckbox {
+                    input:checked ~ {
+                        .fake-checkbox {
+                            border-color:$p42-color;
+                            background: $p42-color; 
+                        }
+                    }
+                }
+
                 .fake-label { color: $white;}
                 label { padding: 4px 20px 0 30px;}
             }
@@ -350,6 +359,7 @@
                 }
             }
 
+            .pro-position,
             .pro-m-number,
             .pro-AgencyName,
             .pro-role,
@@ -631,6 +641,21 @@
     .control-link {
         margin: 0 !important;
         width: 100% !important;
+    }
+}
+.banner-listing {
+    .listing-pro {
+        li {
+            .pro-city {
+                width: 14%;
+            }
+            .pro-priority {
+                width: 14%;
+            }
+            .pro-position {
+                width: 14%;
+            }
+        }
     }
 }
 @keyframes deleting{
