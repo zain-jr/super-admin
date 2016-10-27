@@ -1,3 +1,4 @@
+.location-listing,
 .banner-listing,
 .city-listing,
 .agents-listing-page,
@@ -342,6 +343,8 @@
                 width: 10%;
                 padding: 15px 15px 13px;
             }
+            .pro-lati,
+            .pro-longi,
             .pro-image,
             .pro-name,
             .pro-size {
@@ -636,6 +639,7 @@
         }
     }
 }
+.location-listing,
 .banner-listing,
 .city-listing {
     .control-link {
@@ -655,6 +659,20 @@
             .pro-position {
                 width: 14%;
             }
+        }
+    }
+}
+.location-listing {
+    .layout {
+        padding: 10px;
+
+        span {
+            @include align(middle);
+            padding: 0 10px;
+        }
+        .fake-select {
+            padding: 0;
+            width: 200px;
         }
     }
 }
