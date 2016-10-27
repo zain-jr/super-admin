@@ -612,17 +612,18 @@ h1 {
   position: relative;
 }
 #page-holder {
-  padding: 55px 0 0;
+  padding: 65px 0 0;
+  background: #ebebeb;
   transition: padding 0.5s ease;
   -webkit-transition: padding 0.5s ease;
   -moz-transition: padding 0.5s ease;
   -ms-transition: padding 0.5s ease;
 
   .sideBar-active & {
-    padding: 55px 0 0 270px;
+    padding: 65px 0 0 270px;
 
     @include media('<desktop'){
-      padding: 55px 0 0;
+      padding: 65px 0 0;
     }
   }
 }
