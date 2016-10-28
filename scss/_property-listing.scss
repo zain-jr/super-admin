@@ -3,7 +3,8 @@
 .city-listing,
 .agents-listing-page,
 .user-listing-page,
-.property-listing-page {
+.property-listing-page,
+.news-listing {
     @extend %layout;
     background: $p42-background;
     position: relative;
@@ -11,6 +12,10 @@
 
     @include media('<desktop'){
         min-height: 500px;
+    }
+    
+    .btn-hollow {
+        margin: 0 10px 10px;
     }
 
     .property-status-links-opener {
@@ -639,6 +644,7 @@
         }
     }
 }
+.news-listing,
 .location-listing,
 .banner-listing,
 .city-listing {
