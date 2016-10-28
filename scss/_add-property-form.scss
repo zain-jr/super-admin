@@ -57,7 +57,6 @@
         box-shadow: 0 0 7px rgba($black , 0.22);
         padding: 20px 10px;
         @extend %layout;
-        @extend %container;
         margin: 0 auto 30px;
 
         @include media('<desktop'){

@@ -613,7 +613,6 @@ h1 {
 }
 #page-holder {
   padding: 65px 0 0;
-  background: #ebebeb;
   transition: padding 0.5s ease;
   -webkit-transition: padding 0.5s ease;
   -moz-transition: padding 0.5s ease;
@@ -901,12 +900,13 @@ h1 {
       .fake-label{
         padding: 10px;
         display: block;
-        border: 2px solid $p42-color;
+        border: 2px solid $nugree;
       }
     }
     input:checked ~{
       .fake-label{
         color: $white;
+        background: $nugree;
       }
     }
   }

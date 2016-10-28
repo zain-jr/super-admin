@@ -1,4 +1,4 @@
-
+.addProject,
 .addBanner, .addLocation,
 .addSocieties, .addCity,
 .addNews{
@@ -26,7 +26,7 @@
     }
 
    form{
-        max-width:500px;
+        max-width:810px;
         margin:30px auto;
         overflow: hidden;
 
@@ -80,7 +80,8 @@
         input{
             @include squar(100%, 40px);
             border:none;
-            padding: 8px;
+            padding: 7px;
+            border: 1px solid $nugree;
             @include font(16,19);
         }
         textarea {
