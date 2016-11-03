@@ -777,7 +777,10 @@ h1 {
           background: #535350;
           border-left: 2px solid $orange;
 
-          &:after { display: block;}
+          &:after {
+            display: block;
+            @include media('<tablet'){ display: none !important;}
+          }
         }
       }
 
@@ -811,7 +814,10 @@ h1 {
           background: #535350;
           border-left: 2px solid $orange;
 
-          &:after { display: block;}
+          &:after {
+            display: block;
+            @include media('<tablet'){ display: none !important;}
+          }
         }
 
         span[class^="icon-"],span[class*="icon-"]{

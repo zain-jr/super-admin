@@ -461,6 +461,30 @@
                     }
                 }
 
+                .layout {
+                    padding: 0 50px 0 0;
+                    width: 100%;
+                    display: block;
+                    position: relative;
+
+                    button{
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        right: 0;
+                        left: auto;
+                        width: auto;
+                        background: $gray;
+                        color: $white;
+                        @include font(12,15);
+                        font-weight: 400;
+                        &:hover {
+                            color: $white;
+                            background: darken($gray, 10%);
+                        }
+                    }
+                }
+
                 input{
                     width: 100%;
 
