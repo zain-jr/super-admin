@@ -461,6 +461,14 @@
                     }
                 }
 
+                input{
+                    width: 100%;
+
+                    @include placeholder {
+                        font-weight: 400;
+                    }
+                }
+
                 button,
                 a {
                     border: 0;

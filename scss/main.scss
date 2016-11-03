@@ -674,7 +674,7 @@ h1 {
 }
 #sidebar-dashboard {
   @extend %layout;
-  background: $dark-grey;
+  background: #3e3e3b;
   width: 270px;
   position: fixed;
   top: 56px;
@@ -774,8 +774,8 @@ h1 {
 
       &.active {
         > a {
-          background: $p42-color;
-          color: $white;
+          background: #535350;
+          border-left: 2px solid $orange;
 
           &:after { display: block;}
         }
@@ -794,6 +794,7 @@ h1 {
         color: rgba($white, 0.8);
         text-decoration: none;
         cursor: pointer;
+        border-left: 2px solid transparent;
 
        &:after {
           position: absolute;
@@ -807,8 +808,8 @@ h1 {
         }
 
         &:hover {
-          background: $p42-color;
-          color: $white;
+          background: #535350;
+          border-left: 2px solid $orange;
 
           &:after { display: block;}
         }
