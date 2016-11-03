@@ -674,6 +674,24 @@
     .layout {
         padding: 10px;
 
+        form {
+            @extend %pull-left;
+
+            button{
+                border: 0;
+                background: transparent;
+                color: $nugree;
+                border: 1px solid $nugree;
+                @include align(top);
+                padding: 10px 20px;
+
+                &:hover {
+                    background: $nugree;
+                    color: $white;
+                }
+            }
+        }
+
         span {
             @include align(middle);
             padding: 0 10px;
