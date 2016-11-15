@@ -473,6 +473,8 @@ h1 {
   padding: 0 0 0 50px;
   min-width: 320px;
 
+  .login & { padding: 5px;}
+
   @include media('<tvscreen'){
     padding: 0 0 0 50px;
   }
@@ -597,6 +599,8 @@ h1 {
   width: 100%;
   max-width: 150px;
   margin: 5px 0 5px 10px;
+
+  .login & { margin: 5px auto;}
 
   @include media('<tablet'){
     max-width: 100px;
