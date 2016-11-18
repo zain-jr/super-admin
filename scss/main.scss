@@ -582,24 +582,26 @@ h1 {
       a {
         color: $dim-grey;
         text-decoration: none;
+        cursor: pointer;
 
         &:hover { color: $white;}
+      }
+      .notification-opener.active {
+        color: $white;
       }
     }
   }
   .right-header {
-    width: 25%;
+    width: 30%;
     @extend .pull-right;
     position: relative;
 
-    @include media('<widescreen'){
-      width: 30%;
-    }
     @include media('<desktop'){
-      width: 40%;
+      width: 50%;
     }
     @include media('<tablet'){
       width: 61%;
+      position: static;
     }
 
     .logout {
@@ -635,18 +637,152 @@ h1 {
 }
 .logo {
   width: 100%;
-  max-width: 150px;
+  max-width: 138px;
   margin: 5px 0 5px 10px;
 
   .login & { margin: 5px auto;}
 
   @include media('<tablet'){
     max-width: 100px;
-    margin: 6px 0 7px 6px;
+    margin: 4px 0 0 6px;
   }
 
   a { display: block;}
   img { @extend %img-res;}
+}
+.notification-holder {
+  @extend %layout;
+  background: $white;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  box-shadow: 0 5px 5px rgba($black, 0.5);
+  z-index: 95;
+  padding: 40px 0 30px;
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  a {
+    color: lighten($black, 10%);
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .top-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    @include font(14,17);
+    padding: 10px;
+
+    span, a {
+      width: 50%;
+      @extend %pull-left;
+    }
+    span { font-weight: 600;}
+    a{
+      @extend %text-right;
+      cursor: pointer;
+    }
+  }
+  .text-center {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 4px;
+    background: $white;
+
+    a {
+      @include align(top);
+      cursor: pointer;
+    }
+  }
+  .notification-list {
+    @extend %listreset;
+    @include font(15,18);
+    max-height: 379px;
+    overflow: hidden;
+
+    &.list-expand {
+      overflow-y: auto;
+    }
+
+    li {
+      display: block;
+      position: relative;
+      border-bottom: 2px solid $white;
+
+      &.active {
+        a {
+          background: #e0dfdf;
+        }
+      }
+
+
+      a {
+        @extend %layout;
+        display: block;
+        background: #f5f4f4;
+        text-decoration: none;
+        padding: 0 10px;
+        position: relative;
+
+        .layout{
+          overflow: hidden;
+          padding: 10px 0 0 20px;
+        }
+      }
+      .tag-name {
+        display: block;
+        padding: 0 0 5px;
+      }
+      p {
+        margin: 0 0 10px;
+        color: $dark-grey;
+      }
+      .time {
+        position: absolute;
+        top: 0;
+        right: 50px;
+        @include font(13,16);
+        color: $dark-grey;
+      }
+      .corss {
+        padding: 0;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        padding: 0;
+        cursor: pointer;
+        
+        span {
+          font-size: 20px;
+          line-height: 1;
+        }
+        &:hover {
+          color: $nugree;
+        }
+      }
+    }
+    .user-pic {
+      @include squar(36px,36px);
+      @extend %pull-left;
+      border-radius: 100%;
+      background: #b8babc;
+      @extend %layout;
+      margin: 14px 0 0;
+
+      img { @extend %img-res;}
+    }
+  }
 }
 #page-holder,
 #main {
