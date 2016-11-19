@@ -692,28 +692,11 @@ h1 {
       cursor: pointer;
     }
   }
-  .text-center {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 4px;
-    background: $white;
-
-    a {
-      @include align(top);
-      cursor: pointer;
-    }
-  }
   .notification-list {
     @extend %listreset;
     @include font(15,18);
-    max-height: 379px;
-    overflow: hidden;
-
-    &.list-expand {
-      overflow-y: auto;
-    }
+    max-height: 375px;
+    overflow-y: auto;
 
     li {
       display: block;
@@ -769,6 +752,18 @@ h1 {
         }
         &:hover {
           color: $nugree;
+        }
+      }
+      .text-center {
+        padding: 4px;
+
+        a {
+          @include align(top);
+          cursor: pointer;
+          background: $white;
+          padding: 0;
+          text-decoration: underline;
+          &:hover { text-decoration: none;}
         }
       }
     }

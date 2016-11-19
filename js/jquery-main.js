@@ -17,7 +17,6 @@ $(document).ready(function() {
 		$('.pager').remove();
 	}
 	$('.moreDetail-slide').slideUp();
-	detectingHeight();
 });
 // page init
 jQuery(function(){
@@ -132,9 +131,6 @@ $(document).on('click', '.propertyDocumentCloseBtn', function(){
 $(document).on('click', '.notification-opener', function(){
 	$(this).toggleClass('active');
 	$('.notification-holder').toggleClass('active');
-});
-$(document).on('click', '.see-more-noti', function(){
-	$('.notification-list').addClass('list-expand');
 });
 $(document).on('click', '.notification-list .corss', function(){
 	$(this).closest('li').slideUp();

@@ -6,7 +6,7 @@
 .user-listing-page,
 .property-listing-page,
 .news-listing,
-.feature-listing {
+.feature-listing{
     @extend %layout;
     background: $p42-background;
     position: relative;
@@ -552,7 +552,7 @@
             width: 82%;
             @include font(18,22);
             font-weight: 400;
-            padding: 0 0 0 20px;
+            padding: 0 0 10px 20px;
 
             @include media('<tvscreen'){
                 width: 76%;
@@ -692,6 +692,7 @@
         }
     }
 }
+.email-listing,
 .project-listing,
 .news-listing,
 .location-listing,
