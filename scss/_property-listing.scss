@@ -248,11 +248,12 @@
             }
             form {
                 position: relative;
+                border-radius: 4px;
 
                 button{
                     border: 0;
                     color: $white;
-                    background: $nugree;
+                    background: $mix-black;
                     @include font(14,18);
                     position: absolute;
                     top: 0;
@@ -351,18 +352,18 @@
             .pro-address,
             .pro-type {
                 width: 20%;
-                padding: 15px 15px 13px;
+                padding: 15px 5px 13px;
             }
             .pro-priority,
             .pro-email,
             .pro-location {
                 width: 20%;
-                padding: 15px 15px 13px;
+                padding: 15px 5px 13px;
             }
             .pro-date,
             .pro-price {
                 width: 10%;
-                padding: 15px 15px 13px;
+                padding: 15px 5px 13px;
             }
             .pro-lati,
             .pro-longi,
@@ -370,7 +371,7 @@
             .pro-name,
             .pro-size {
                 width: 13%;
-                padding: 15px 15px 13px;
+                padding: 15px 5px 13px;
             }
 
             .pro-image {
@@ -389,12 +390,16 @@
             .pro-role,
             .pro-date {
                 width: 10%;
-                padding: 15px 15px 13px;
+                padding: 15px 5px 13px;
             }
             .pro-p-number,
             .pro-controls {
                 width: 15%;
-                padding: 15px 15px 13px;
+                padding: 15px 5px 13px;
+            }
+            .pro-controls {
+                padding: 15px 5px 13px;
+                width: 10%;
             }
             .p-role {
                 @extend %text-left;
@@ -420,58 +425,66 @@
             @extend %listreset;
             @include font(14,17);
             float: left;
-            width: 13%;
+            width: 10%;
             margin: -35px 0 0;
 
             li {
-                display: block;
+                float: left;
                 margin: 0 0 10px;
+                @extend %text-center;
+                width: 50%;
 
-                &.active {
+                @include media('<1400px'){
+                    width: 100%;
+                    float: none;
+                    display: block;
+                }
+
+                &.active { 
                     button {
-                        color: $green;
+                        background: $green;
                         &:hover {
-                            color: darken($green, 10%);
+                            background: darken($green, 10%);
                         }
                     }
                 }
                 &.deactive {
                     button {
-                        color: lighten($nugree, 30%);
+                        background: lighten($nugree, 30%);
                         &:hover {
-                            color: darken($nugree, 5%);
+                            background: darken($nugree, 5%);
                         }
                     }
                 }
                 &.pending {
                     button {
-                        color: $orange;
+                        background: $orange;
                         &:hover {
-                            color: darken($orange, 10%);
+                            background: darken($orange, 10%);
                         }
                     }
                 }
                 &.reject {
                     button {
-                        color: lighten($red, 10%);
+                        background: lighten($red, 10%);
                         &:hover {
-                            color: darken($red, 10%);
+                            background: darken($red, 10%);
                         }
                     }
                 }
                 &.delete {
                     button {
-                        color: #e14646;
+                        background: #e14646;
                         &:hover {
-                            color:darken(#e14646, 10%);
+                            background:darken(#e14646, 10%);
                         }
                     }
                 }
                 &.verified {
                     button {
-                        color: $p42-color;
+                        background: $p42-color;
                         &:hover {
-                            color: darken($p42-color, 10%);
+                            background: darken($p42-color, 10%);
                         }
                     }
                 }
@@ -489,10 +502,12 @@
                         right: 0;
                         left: auto;
                         width: auto;
+                        height: auto;
                         background: $gray;
                         color: $white;
                         @include font(12,15);
                         font-weight: 400;
+                        border-radius: 0;
                         &:hover {
                             color: $white;
                             background: darken($gray, 10%);
@@ -513,29 +528,20 @@
                     border: 0;
                     cursor: pointer;
                     text-decoration: none;
-                    color: #b2b3b5;
-                    display: block;
-                    padding: 3px;
-                    width: 100%;
-                    @extend %text-left;
+                    color: $white;
+                    @include align(top);
+                    padding: 10px 5px;
+                    border-radius: 100%;
+                    @include squar(40px, 40px);
 
                     span{
                         font-size: 18px;
                         line-height: 20px;
-                        width: 50px;
-                        float: left;
+                        display: block;
                         @extend %text-center;
-
-                        @include media('<tvscreen'){
-                            width: 20px;
-                            @include font(14,17);
-                        }
                     }
                     [class="icon-tick"],[class="icon-cross"]{
                         font-size: 20px;
-                    }
-                    &:hover{
-                        color: $p42-color;
                     }
                 }
             }
@@ -555,12 +561,15 @@
             padding: 0 0 10px 20px;
 
             @include media('<tvscreen'){
+                width: 79%;
+            }
+            @include media('<1400px'){
                 width: 76%;
             }
 
             .layout {
                 float: left;
-                width: 87%;
+                width: 90%;
                 padding: 0 10px 0 0;
             }
         }
