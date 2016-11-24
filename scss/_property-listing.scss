@@ -1,3 +1,4 @@
+.email-listing,
 .project-listing,
 .location-listing,
 .banner-listing,
@@ -8,7 +9,6 @@
 .news-listing,
 .feature-listing{
     @extend %layout;
-    background: $p42-background;
     position: relative;
     min-height: 830px;
 
@@ -761,6 +761,24 @@
         .fake-select {
             padding: 0;
             width: 200px;
+        }
+    }
+}
+.email-listing {
+    .property-status-links {
+        background: #dde0e2 ;
+
+        li {
+            &.active {
+                a{
+                    color: $light-blue;
+                }
+            }
+            a{
+                &:hover {
+                    color: $light-blue;
+                }
+            }
         }
     }
 }
