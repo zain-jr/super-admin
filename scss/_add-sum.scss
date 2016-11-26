@@ -3,10 +3,11 @@
 .addSocieties, .addCity, .login-page,
 .addNews{
     background: $p42-background;
+    border-radius: 4px;
 
    &.container{
-       max-width: 995px;
-       padding:0;
+       max-width: 700px;
+       padding:10px 20px;
        margin: 50px auto 0;
     }
 
@@ -47,10 +48,10 @@
     }
 
     h2{
-        color:$white;
+        color:$gen-color;
         text-align: center;
-        background: $nugree;
         padding: 5px;
+        font-weight: 600;
         @extend %text-upparcase;
       }
 
@@ -66,7 +67,7 @@
      }
 
     label{
-        color: $darken-grey;
+        color: $gen-color;
         width:156px;
         @extend %pull-left;
         margin: 7px 0;
@@ -85,13 +86,19 @@
             @include squar(100%, 40px);
             border:none;
             padding: 7px;
-            border: 1px solid $nugree;
+            border: 1px solid $gen-color;
             @include font(16,19);
         }
         textarea {
             resize: none;
             height: 150px;
             overflow: auto;
+        }
+    }
+    .fake-select {
+        border-color:$gen-color;
+        &:after {
+            border-top-color:$gen-color;
         }
     }
 }

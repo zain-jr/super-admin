@@ -40,7 +40,6 @@ $media-expressions: (
 @import 'email-listing';
 @import 'fancybox';
 @import 'select2-min';
-
 body {
   &.sideBar-active {
     @include media('<tablet'){
@@ -143,7 +142,7 @@ h1 {
   font-weight: 700;
   text-decoration: none;
   color: $white;
-  background: $nugree;
+  background: $p42-color;
   padding: 10px 25px;
   border: 0;
   transition: background 0.4s ease;
@@ -157,7 +156,7 @@ h1 {
   }
 
   &:hover {
-    background: lighten( $nugree, 10%);
+    background: lighten( $p42-color, 10%);
   }
 }
 .customCheckbox,
@@ -465,9 +464,9 @@ h1 {
 }
 .select2-container .select2-choice .select2-arrow {
   width: 28px;
-  background: $nugree;
+  background: transparent;
   border-radius: 0;
-  border-color:$nugree; 
+  border-color:$white; 
 }
 .select2-container .select2-choice .select2-arrow b{
   background: transparent;
@@ -943,8 +942,9 @@ h1 {
 
       &.active {
         > a {
-          background: #535350;
+          background: rgba($black, 0.5);
           border-left: 2px solid $orange;
+          color: $white;
 
           &:after {
             display: block;
@@ -980,8 +980,9 @@ h1 {
         }
 
         &:hover {
-          background: #535350;
+          background: rgba($black, 0.5);
           border-left: 2px solid $orange;
+          color: $white;
 
           &:after {
             display: block;
