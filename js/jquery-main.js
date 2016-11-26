@@ -140,6 +140,17 @@ $(document).on('click', '.all-read', function(){
 		$(this).removeClass('active');
 	});
 });
+$(document).on('click', '.email-full-detail-opener', function(){
+	$('.opened-mail-holder').show();
+	$(this).removeClass('unread')
+});
+$(document).on('click', '.email-detail-close', function(){
+	$('.opened-mail-holder').hide();
+});
+$(document).on('click', '.email-minimizer', function(){
+	$('.opened-mail-holder').find('.mail-body').slideToggle();
+});
+
 function previewAddPropertyImg(file, target)
  {
 	previewFile(file, target);

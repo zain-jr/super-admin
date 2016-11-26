@@ -1,0 +1,348 @@
+.email-listing {
+    position: relative;
+
+    .top-quick-links {
+        @extend %layout;
+        padding: 10px;
+
+        @include media('<tablet'){
+            min-width: 720px;
+            padding: 10px 30px;
+
+        }
+    }
+    .property-status-links {
+        @include media('<desktop'){
+            top: auto;
+        }
+    }
+    .search-sorting,
+    .quick-linsk {
+        @extend %listreset;
+        float: left;
+        @include align-reset(top, 18,21);
+    }
+    .quick-linsk {
+        width: 30%;
+        li {
+            padding: 0 5px;
+        }
+        label {
+            padding:0  6px;
+            margin: 8px 0 0;
+        }
+        a {
+            @include align(top);
+            text-decoration: none;
+            color: $white;
+            background: $dark-grey;
+            border-radius: 100%;
+            padding: 8px 10px;
+            @include squar(40px,40px);
+
+            &.delete {
+                background: $red;
+                padding: 9px 11px;
+            }
+            &.refresh {
+                background: $p42-color;
+                padding: 9px;
+            }
+
+            span {
+                font-size: 22px;
+                line-height: 1;
+            }
+        }
+    }
+    .search-sorting {
+        width: 40%;
+
+        li {
+            width: 50%;
+            padding: 0 5px;
+        }
+    }
+    .compose {
+        color: $white;
+        text-decoration: none;
+        @extend %text-upparcase;
+        background: $p42-color;
+        @include font(18,23);
+        @extend %pull-right;
+        border-radius: 4px;
+        padding: 5px 20px 6px;
+        border-bottom: 3px solid darken($p42-color, 20%);
+        position: relative;
+
+        &:hover {
+            top: 1px;
+            border-bottom: 2px solid darken($p42-color, 20%);
+        }
+    }
+    .lists-email {
+        @extend %listreset;
+        padding: 5px 0;
+
+        li {
+            @include align-reset(top, 15,20);
+            padding: 7px;
+            border-bottom: 1px solid rgba($black, 0.2);
+            margin: 0 0 10px;
+            cursor: pointer;
+            position: relative;
+
+            @include media('<tablet'){
+                padding: 7px 7px 7px 40px;
+            }
+
+            &.unread,
+            &:hover {
+                background: $p42-background;
+            }
+
+            p { margin: 0;}
+
+            .click-to {
+                width: 5%;
+                padding: 0 10px 0 0;
+
+                @include media('<widescreen'){
+                    width: 10%;
+                }
+                @include media('<tablet'){
+                    position: absolute;
+                    top: 20px;
+                    left: 5px;
+                    z-index: 5;
+                }
+
+                p{
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    @extend %layout;
+                }
+
+                label {
+                    display: block;
+                }
+            }
+            .user-name {
+                width: 10%;
+                padding: 0 10px 0 0;
+
+                @include media('<widescreen'){
+                    width: 15%;
+                }
+                @include media('<tablet'){
+                    width: 100%;
+                    display: block;
+                    font-weight: 700;
+                }
+
+                p{
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    @extend %layout;
+                }
+            }
+            .mail-description {
+                width: 70%;
+                padding: 0 10px 0 0;
+
+                @include media('<widescreen'){
+                    width: 60%;
+                }
+                @include media('<tablet'){
+                    width: 100%;
+                    display: block;
+                }
+
+                p{
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    @extend %layout;
+                }
+            }
+            .mail-time {
+                width: 15%;
+                @extend %text-right;
+                padding: 5px 10px 0 0;
+                @include font(12,15);
+
+                @include media('<widescreen'){
+                    padding: 0 10px 0 0;
+                }
+                @include media('<tablet'){
+                    width: 100%;
+                    display: block;
+                    text-align: left !important;
+                }
+
+            }
+        }
+    }
+}
+.search-rand {
+    @extend %layout;
+    border: 1px solid $black;
+    position: relative;
+    border-radius: 4px;
+
+    input{
+        border: 0;
+        padding: 6px 30px 6px 6px;
+        background: transparent;
+        @include squar(100%, 35px);
+        @include font(15, 18);
+        font-weight: 400;
+
+        @include placeholder {
+            color: $black;
+        }
+    }
+    button {
+        background: transparent;
+        border: 0;
+        padding: 0 6px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+.opened-mail-holder {
+    width: 513px;
+    border: 1px solid $p42-background;
+    position: fixed;
+    bottom: 0;
+    right: 5px;
+    z-index: 5;
+    background: $white;
+    display: none;
+
+    @include media('<tablet'){
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9999;
+        overflow: auto;
+    }
+
+    .mail-header {
+        background: #3f71d0;
+        color: $white;
+        @extend %layout;
+        position: relative;
+        padding: 10px;
+
+        p { 
+            margin: 0;
+            padding: 0 50px 0 0;
+        }
+    }
+    .mail-body {
+        padding: 10px;
+    }
+    .controls-mail {
+        @extend %listreset;
+        @include align-reset(top, 20,20);
+        position: absolute;
+        top: 50%;
+        right: 5px;
+        margin: -12px 0 0;
+
+        li {
+            padding: 0 5px;
+            a{
+                display: block;
+                color: $white;
+                text-decoration: none;
+                cursor: pointer;
+
+                &.email-minimizer {
+                    @include media('<tablet'){
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .user-info {
+        @extend %layout;
+        margin: 0 0 20px;
+
+        .picture {
+            @include squar(45px,45px);
+            border-radius: 100%;
+            @extend %layout;
+            background: $dark-grey;
+            @extend %pull-left;
+
+            img{ @extend %layout;}
+        }
+        .user-caption {
+            @extend %layout;
+            padding: 0 0 0 20px;
+
+            strong, span, time {
+                display: block;
+            }
+            strong {
+                color: $dark-grey;
+                @include font(16,20);
+            }
+            span,
+            time {
+                color: darken($dim-grey, 40%);
+                @include font(12,15);
+            }
+            span {
+                @include font(14,17);
+            }
+        }
+    }
+    .user-email-text {
+        @include font(14, 19);
+
+        .subject {
+            display: block;
+            font-weight: 700;
+            color: $black;
+        }
+    }
+    .reply-mail {
+        @extend %layout;
+        width: 100%;
+        position: relative;
+
+        .nugree-logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            max-width: 30px;
+
+            img{ @extend %img-res;}
+        }
+        textarea {
+            @include squar(100%, 120px);
+            overflow: auto;
+            resize: none;
+            padding: 10px 10px 10px 45px;
+            margin: 0 0 20px;
+        }
+        input[type="submit"] {
+            color: $white;
+            width: 100px;
+            display: block;
+            @include font(14,18);
+            border: 0;
+            padding: 5px 20px;
+            background: #3f71d0;
+            margin: 0 0 0 auto;
+            &:hover { background: $p42-color;}
+        }
+    }
+}

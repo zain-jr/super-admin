@@ -37,6 +37,7 @@ $media-expressions: (
 @import 'change-password';
 @import 'property-detail';
 @import 'add-sum';
+@import 'email-listing';
 @import 'fancybox';
 @import 'select2-min';
 
@@ -607,7 +608,7 @@ h1 {
 
     .logout {
       @extend %pull-right;
-      background: $red;
+      background: $nugree;
       text-decoration: none;
       color: $white;
       @extend %text-upparcase;
@@ -616,7 +617,7 @@ h1 {
 
       @include media('<tablet'){
         @include font(13,16);
-        padding: 14px 7px;
+        padding: 9px 7px;
       }
 
       &:hover {
@@ -857,7 +858,7 @@ h1 {
   @include media('<tablet'){
     width: 100%;
     left: -100%;
-    top: 44px;
+    top: 48px;
   }
 
   .sideBar-active & {
