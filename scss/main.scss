@@ -351,7 +351,6 @@ h1 {
   z-index: 1;
   cursor: pointer;
   border: 1px solid $mix-black;
-  border-radius: 4px;
 
   &:after {
     position: absolute;
@@ -537,6 +536,10 @@ h1 {
     
     @include media('<tablet'){
       font-size: 18px;
+    }
+
+    &:hover {
+      color: $white;
     }
   }
   .alerts{
